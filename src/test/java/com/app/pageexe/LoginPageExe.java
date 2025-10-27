@@ -9,5 +9,7 @@ public class LoginPageExe extends BookAHotel_Locators {
 	public static void username() {
 		new Base().type(LoginPage_Locator.getUsername(), "");
 	}
-
+public static void username1() {
+		new Base().type(LoginPage_Locator.getUsername(), "");
+	}
 }

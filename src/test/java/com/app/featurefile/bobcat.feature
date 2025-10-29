@@ -1,4 +1,5 @@
  Feature: Validate the bobcat homepage
+ @bobcat
 Scenario: validate the euipment dropdown
 Given launch the browser
 And load the url

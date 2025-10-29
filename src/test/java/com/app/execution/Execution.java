@@ -23,4 +23,7 @@ public static void loder() {
 // System.out.println(getloders.getText());
 System.out.println(getloders().getText());
 }
+public static void equipment1() {
+	BaseClass.clickElement(getequipment());
+}
 }

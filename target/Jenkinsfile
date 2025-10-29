@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+   
+
+    parameters {
+        string(name: 'BOBCAT_TAGS', defaultValue: '@bobcat', description: 'Tags to run')
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/banupriyap24/git_project1.git'
+        }
+
+        stage('Run Cucumber Tests') {
+            steps {
+                bat "mvn clean test -Dcucumber.filter.tags=${params.BOBCAT_TAGS}"
+            }
+        }
+    }
+
+    post {
+        always {
+            junit '**/target/surefire-reports/*.xml'
+        }
+    }
+}

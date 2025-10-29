@@ -8,6 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "C:\\Users\\Madhan\\eclipse-workspace\\selenium\\Bob_Cat\\src\\test\\java\\com\\app\\featurefile",
 glue= "com.app.stepdefenition",
+tags = "@bobcat",
 publish= true)
 public class RunnerClass {
 
